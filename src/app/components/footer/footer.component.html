@@ -1,6 +1,6 @@
 <div class="flex justify-center items-center min-h-[500px] bg-white">
-    <div class="bg-white flex flex-col gap-[114px] md:flex-row py-[55px] px-20 rounded-xl shadow-md w-full max-w-5xl">
-        <div class="grid gap-6">
+    <div class="bg-white flex flex-col gap-10 md:flex-row py-[55px] px-20 rounded-xl shadow-md w-full max-w-5xl">
+        <div class="grid gap-6 w-[407px]">
             <div class="flex items-center space-x-2 mb-4">
                 <div class="flex -space-x-2">
                     <img class="w-8 h-8 rounded-full border-2 border-white"
@@ -15,27 +15,27 @@
             </h2>
             <p class="text-gray-600 mb-4">Let us know and we will make it available for you in a jiffy.</p>
         </div>
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div class="grid grid-cols-2 gap-4">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="w-full">
+            <div class="grid md:grid-cols-2 gap-4">
                 <div>
                     <label for="name" class="block text-sm font-medium text-[#757575] mb-1">Name</label>
                     <input id="name" formControlName="name" type="text" placeholder="Enter your name"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full">
+                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
                 </div>
                 <div>
                     <label for="email" class="block text-sm font-medium text-[#757575] mb-1">Email</label>
                     <input id="email" formControlName="email" type="email" placeholder="Enter your email"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full">
+                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
                 </div>
                 <div>
                     <label for="product" class="block text-sm font-medium text-[#757575] mb-1">Product name</label>
                     <input id="product" formControlName="product" type="text" placeholder="Enter name of product"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full">
+                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
                 </div>
                 <div>
                     <label for="vendor" class="block text-sm font-medium text-[#757575] mb-1">Vendor name</label>
                     <input id="vendor" formControlName="vendor" type="text" placeholder="e.g. Jumia, Airpeace, Spotify"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full">
+                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
                 </div>
             </div>
             <button type="submit"
