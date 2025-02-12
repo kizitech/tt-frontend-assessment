@@ -5,12 +5,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from '../components/footer/footer.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { FiltersContainerComponent } from "../components/filters-container/filters-container.component";
+import { HeaderComponent } from '../components/header/header.component';
 
 @Component({
   selector: 'app-home',
   imports: [
     MatIconModule,
     FooterComponent,
+    HeaderComponent,
     NavbarComponent,
     FlexLayoutModule,
     ReactiveFormsModule,
