@@ -1,8 +1,8 @@
 <div>
-    <div fxLayoutAlign="end center" fxHide fxShow.lt-md>
-        <div class="bg-white rounded-xl border-2 border-black p-2 w-fit cursor-pointer" fxLayoutAlign="center"
+    <div class="justify-end items-center flex md:hidden">
+        <div class="bg-white rounded-xl border-2 border-black p-2 w-fit cursor-pointer flex justify-center"
             (click)="toggleFiltersContainer()">
-            <div fxLayout="row" fxLayoutAlign="center center" class="gap-2">
+            <div class="flex items-center gap-2">
                 <button mat-icon-button>
                     <mat-icon class="font-bold text-[0.9rem] pt-0.5">filter_list</mat-icon>
                 </button>
@@ -10,8 +10,8 @@
             </div>
         </div>
     </div>
-    <div class="absolute box-shadow border-1 border-gray-200 rounded-xl bg-white z-20 h-[380px] w-[240px] top-20 right-0 lg:sticky lg:shadow-none lg:border-none overflow-auto no-scrollbar"
-        [fxHide.lt-md]="!showFiltersContainer()">
+    <div class="absolute shadow border border-gray-200 rounded-xl bg-white z-20 h-[380px] w-[240px] top-20 right-0 lg:sticky lg:shadow-none lg:border-none overflow-auto no-scrollbar"
+        [class.hidden]="!showFiltersContainer()">
         <app-filters></app-filters>
     </div>
 </div>
