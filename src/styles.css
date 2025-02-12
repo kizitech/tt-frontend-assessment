@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @font-face {
     font-family: 'CreatoDisplay';
