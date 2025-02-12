@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from "./pages/home/home.component";
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    NavbarComponent,
-    FooterComponent,
-    ReactiveFormsModule,
+    HomeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -1,0 +1,81 @@
+<!-- The Navigation Bar -->
+<app-navbar></app-navbar>
+
+<!-- The App Body -->
+<main>
+    <div class="p-6 pt-10 pr-5 pb-6 pl-5 sm:pr-10 sm:pl-10">
+        <div>
+            <div class="relative" fxLayout="row" fxLayoutGap="2rem" fxLayout.lt-md="column">
+                <div>
+                    <div fxLayoutAlign="end center" fxHide="" fxShow.lt-md="">
+                        <div class="border-2 border-black p-2 w-fit cursor-pointer" fxLayoutAlign="center"
+                            (click)="toggleFiltersContainer()">
+                            <div fxLayout="row" fxLayoutAlign="start center" class="gap-2">
+                                <button mat-icon-button>
+                                    <mat-icon class="font-bold text-[0.9rem] pt-1">filter_list</mat-icon>
+                                </button>
+                                <span class="font-semibold text-xs mb-1">Filters</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute shadow-2xl border-2 bg-white z-20 h-[100vh] top-20 left-0 lg:sticky lg:shadow-none lg:border-none"
+                        [fxHide.lt-md]="!showFiltersContainer">
+                        <div class="h-[100vh] overflow-auto">
+                            <filters></filters>
+                        </div>
+                    </div>
+                </div>
+                <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lt-md="100%">
+                    <div *ngFor="let store-card of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+                        <div>
+                            <div>
+                                <div fxLayout="row" fxLayoutAlign="space-between center" class="pb-2">
+                                    <div fxLayout="row" fxLayoutAlign.lt-sm="end">
+                                        <div>
+                                            <div class="text-3xl font-bold">In a rush?</div>
+                                            <p class="pt-1 text-sm text-[#545454]">
+                                                Here’s the fastest delivery for you
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div fxLayout="row" fxLayoutGap="40" fxLayoutAlign="center center"
+                                        fxLayout.lt-sm="column" fxLayoutGap.lt-sm="5">
+                                        <div class="text-base font-medium -mb-6">
+                                            <a routerLink="/" class="underline">See all</a>
+                                        </div>
+
+                                        <div fxLayout="row" fxLayoutGap="4" fxHide.lt-sm>
+                                            <button fxLayout="row" fxLayoutAlign="center center"
+                                                class="bg-[#EEEEEE] hover:bg-[#afafaf] w-10 h-10 rounded-full">
+                                                <mat-icon>arrow_back</mat-icon>
+                                            </button>
+                                            <button fxLayout="row" fxLayoutAlign="center center"
+                                                class="bg-[#EEEEEE] hover:bg-[#afafaf] w-10 h-10 rounded-full">
+                                                <mat-icon>arrow_forward</mat-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="max-w-[55rem] mx-auto overflow-x-auto no-scrollbar">
+                                <div fxLayout="row" class="gap-4">
+                                    <a routerLink="/store-item" fxFlex="260px"
+                                        *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]"
+                                        class="h-[210px]">
+                                        <store-card></store-card>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- The Footer -->
+<app-footer></app-footer>
