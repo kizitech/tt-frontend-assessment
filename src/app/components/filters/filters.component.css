@@ -1,17 +1,20 @@
-::ng-deep.mdc-list-item--with-leading-radio .mdc-list-item__start {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+.list-container {
+    padding: 16px;
+    border-bottom: 1px solid #E0E0E0;
 }
-::ng-deep.mdc-list-item--with-leading-icon .mdc-list-item__start {
-    margin-left: 4px !important;
-    margin-right: 4px !important;
+
+.list-title {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #757575;
+    margin-bottom: 8px;
 }
-::ng-deep.mat-mdc-list-option .mdc-radio {
-     padding: calc((10px - 2px) / 2) !important; 
-    padding: calc((var(--mdc-radio-state-layer-size, 10px) - 2px) / 2) !important; 
+
+.selection-list {
+    padding: 0 !important;
 }
-::ng-deep.mat-mdc-list-base {
-    --mdc-list-list-item-one-line-container-height: 43px;
-    --mdc-list-list-item-two-line-container-height: 57px;
-    --mdc-list-list-item-three-line-container-height: 79px;
+
+.list-option {
+    color: #222;
 }

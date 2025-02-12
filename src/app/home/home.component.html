@@ -2,30 +2,12 @@
 <app-navbar></app-navbar>
 
 <!-- The App Body -->
-<main>
+<main class="bg-[#FAFAFA]">
     <div class="p-6 pt-10 pr-5 pb-6 pl-5 sm:pr-10 sm:pl-10">
         <div>
             <div class="relative" fxLayout="row" fxLayoutGap="2rem" fxLayout.lt-md="column">
-                <div>
-                    <div fxLayoutAlign="end center" fxHide="" fxShow.lt-md="">
-                        <div class="border-2 border-black p-2 w-fit cursor-pointer" fxLayoutAlign="center"
-                            (click)="toggleFiltersContainer()">
-                            <div fxLayout="row" fxLayoutAlign="start center" class="gap-2">
-                                <button mat-icon-button>
-                                    <mat-icon class="font-bold text-[0.9rem] pt-1">filter_list</mat-icon>
-                                </button>
-                                <span class="font-semibold text-xs mb-1">Filters</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute shadow-2xl border-2 bg-white z-20 h-[100vh] top-20 left-0 lg:sticky lg:shadow-none lg:border-none"
-                        [fxHide.lt-md]="!showFiltersContainer">
-                        <div class="h-[100vh] overflow-auto">
-                            <filters></filters>
-                        </div>
-                    </div>
-                </div>
-                <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lt-md="100%">
+                <app-filters-container></app-filters-container>
+                <!-- <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lt-md="100%">
                     <div *ngFor="let store-card of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
                         <div>
                             <div>
@@ -71,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

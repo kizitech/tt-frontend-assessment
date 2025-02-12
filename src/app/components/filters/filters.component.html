@@ -1,128 +1,52 @@
 <div>
-  <mat-list>
-    <mat-list-item>
-      <div class="text-2xl font-bold" matsubheader>
-        All Stores
-      </div>
-    </mat-list-item>
+  <mat-list class="list-container">
+    <span class="list-title">Category</span>
+    <mat-selection-list class="selection-list" [multiple]="false">
+      <mat-list-option togglePosition="before"> <span class="list-option">Restaurant</span></mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">Music</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">Shopping</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">Ride</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">E-commerce</mat-list-option>
+    </mat-selection-list>
   </mat-list>
-  <mat-accordion>
-    <mat-expansion-panel style="box-shadow: none;" (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title class="text-lg font">
-          Sort
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-list>
-        <mat-selection-list [multiple]="false">
-          <mat-list-option togglePosition="before">
-            Picked for you (default)
-          </mat-list-option>
-          <mat-list-option togglePosition="before">
-            Most popular
-          </mat-list-option>
-          <mat-list-option togglePosition="before">
-            Rating
-          </mat-list-option>
-          <mat-list-option togglePosition="before">
-            Delivery
-          </mat-list-option>
-        </mat-selection-list>
-      </mat-list>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel style="box-shadow: none;" (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title class="text-lg fon">
-          From uber eats
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-list>
-        <mat-list-item>
-          <mat-icon matListItemIcon>local_offer</mat-icon>
-          <div matListItemTitle>Offers</div>
-          <div matListItemMeta>
-            <mat-slide-toggle></mat-slide-toggle>
-          </div>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon matListItemIcon>rate_review</mat-icon>
-          <div matListItemTitle>Best overall</div>
-          <div matListItemMeta>
-            <mat-slide-toggle></mat-slide-toggle>
-          </div>
-        </mat-list-item>
-      </mat-list>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel style="box-shadow: none;" (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title class="text-lg fon">
-          Price
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-list>
-        <div>
-          <mat-chip-listbox aria-label="Dog selection">
-            <mat-chip>
-              $
-            </mat-chip>
-            <mat-chip color="primary">
-              $$
-            </mat-chip>
-            <mat-chip color="accent">
-              $$$
-            </mat-chip>
-            <mat-chip color="accent">
-              $$$$
-            </mat-chip>
-          </mat-chip-listbox>
-        </div>
-      </mat-list>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel style="box-shadow: none;" (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title class="text-lg fon">
-          Delivery Fee
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div>
-        <mat-slider>
-          <input matSliderThumb>
-        </mat-slider>
-      </div>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel style="box-shadow: none;" (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title class="text-lg fon">
-          Dietary
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div>
-        <mat-chip-listbox aria-label="Dog selection">
-          <mat-chip>
-            <img matChipAvatar src="https://tse1.mm.bing.net/th?id=OIP.ewbzxTs1p8iZwDzJXQMalgHaEV&pid=Api&P=0&h=220"
-              alt="Photo of a Shiba Inu" />
-            Vegan
-          </mat-chip>
-          <mat-chip>
-            <img matChipAvatar src="https://tse4.mm.bing.net/th?id=OIP._jVKAfdlZaC3hN3x7GiHhwHaFu&pid=Api&P=0&h=220"
-              alt="Photo of a Shiba Inu" />
-            Vegetable
-          </mat-chip>
-        </mat-chip-listbox>
-      </div>
-    </mat-expansion-panel>
-  </mat-accordion>
+
+  <mat-list class="list-container">
+    <span class="list-title">Price</span>
+    <div>
+      <mat-slider>
+        <input matSliderStartThumb>
+        <input matSliderEndThumb>
+      </mat-slider>
+    </div>
+    <div>
+      <mat-chip-listbox aria-label="Price selection">
+        <mat-chip color="accent">$$$</mat-chip>
+        <mat-chip color="accent">$$$$</mat-chip>
+      </mat-chip-listbox>
+    </div>
+  </mat-list>
+
+  <mat-list class="list-container">
+    <span class="list-title">Percentage</span>
+    <mat-selection-list class="selection-list" [multiple]="false">
+      <mat-list-option class="list-option" togglePosition="before">Free</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">0 - 10%</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">10 - 25%</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">35 - 50%</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">50 - 65%</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">65% & above</mat-list-option>
+    </mat-selection-list>
+  </mat-list>
+
+  <mat-list class="list-container">
+    <span class="list-title">Location</span>
+    <mat-selection-list class="selection-list" [multiple]="false">
+      <mat-list-option class="list-option" togglePosition="before">Lagos</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">Ogun</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">Oyo</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">Abuja</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">Port Harcourt</mat-list-option>
+      <mat-list-option class="list-option" togglePosition="before">65% and Above</mat-list-option>
+    </mat-selection-list>
+  </mat-list>
 </div>
