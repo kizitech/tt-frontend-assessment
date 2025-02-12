@@ -1,66 +1,71 @@
-<section>
-  <nav class="flex w-full h-[80px] justify-between px-[60px] max-md:px-[30px] items-center">
-    <img src="/images/logo.png" class="w-[100px] h-[32px] object-contain" alt="">
-    <ul class="w-fit max-md:hidden h-fit flex items-center gap-[24px] capitalize text-[16px] justify-center">
+<nav class="flex w-full h-[80px] justify-between px-4 md:-8 items-center">
+  <img src="/images/logo.png" class="w-[100px] h-[32px] object-contain" alt="">
+  <ul class="w-fit max-md:hidden h-fit flex items-center gap-[24px] capitalize text-[16px] justify-center">
+    <li>The What?</li>
+    <li class="w-[2px] h-[28px] bg-[#E0E0E0]"></li>
+    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/mentor.png"
+        alt="">mentor</li>
+    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/events.png"
+        alt="">events</li>
+    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/coupons.png"
+        alt="">coupons</li>
+    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/courses.png"
+        alt="">courses</li>
+    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/jobs.png"
+        alt="">jobs</li>
+  </ul>
+
+  <span class="flex gap-[16px] max-md:hidden items-center justify-center">
+    <img class="w-[32px] h-[32px]" src="/images/search_black_24dp 1.png" alt="">
+    <p class="w-[2px] h-[28px] bg-[#E0E0E0]"></p>
+    <button class="w-[80px] h-[40px] text-[#9444CB] rounded-[12px] border-[1px] border-[#E0E0E0]">Login</button>
+    <button class="bg-[#9444CB] w-[144px] h-[40px] rounded-[8px] text-white">Join The Tribe</button>
+  </span>
+
+  <div [@menuToggle]="menuOpen ? 'open' : 'closed'"
+    class="w-full left-0 z-[100] h-fit bg-white absolute top-[79px] items-start justify-between p-[20px] overflow-hidden">
+    <ul class="w-full h-fit flex flex-col items-start capitalize text-[16px] justify-center">
       <li>The What?</li>
-      <li class="w-[2px] h-[28px] bg-[#E0E0E0]"></li>
-      <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/mentor.png"
-          alt="">mentor</li>
-      <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/events.png"
-          alt="">events</li>
-      <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/coupons.png"
-          alt="">coupons</li>
-      <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/courses.png"
-          alt="">courses</li>
-      <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/jobs.png"
-          alt="">jobs</li>
+      <li class="w-full h-[2px] bg-[#E0E0E0]"></li>
+      <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
+        <img class="w-[24px] h-[24px]" src="/images/mentor.png" alt="">mentor
+      </li>
+      <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
+        <img class="w-[24px] h-[24px]" src="/images/events.png" alt="">events
+      </li>
+      <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
+        <img class="w-[24px] h-[24px]" src="/images/coupons.png" alt="">coupons
+      </li>
+      <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
+        <img class="w-[24px] h-[24px]" src="/images/courses.png" alt="">courses
+      </li>
+      <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
+        <img class="w-[24px] h-[24px]" src="/images/jobs.png" alt="">jobs
+      </li>
     </ul>
-
-    <span class="flex gap-[16px] max-md:hidden items-center justify-center">
-      <img class="w-[32px] h-[32px]" src="/images/search_black_24dp 1.png" alt="">
-      <p class="w-[2px] h-[28px] bg-[#E0E0E0]"></p>
-      <button class="w-[80px] h-[40px] text-[#9444CB] rounded-[12px] border-[1px] border-[#E0E0E0]">Login</button>
-      <button class="bg-[#9444CB] w-[144px] h-[40px] rounded-[8px] text-white">Join The Tribe</button>
-    </span>
-
-    <div [@menuToggle]="menuOpen ? 'open' : 'closed'"
-      class="w-full left-0 z-[100] h-fit bg-white absolute top-[79px] items-start justify-between p-[20px] overflow-hidden">
-      <ul class="w-full h-fit flex flex-col items-start gap-[24px] capitalize text-[16px] justify-center">
-        <li>The What?</li>
-        <li class="w-full h-[2px] bg-[#E0E0E0]"></li>
-        <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/mentor.png"
-            alt="">mentor</li>
-        <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/events.png"
-            alt="">events</li>
-        <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/coupons.png"
-            alt="">coupons</li>
-        <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/courses.png"
-            alt="">courses</li>
-        <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/jobs.png"
-            alt="">jobs</li>
-      </ul>
-      <span class="flex w-full gap-[16px] flex-col items-start pt-[20px] justify-center">
-        <span class="w-full flex items-start justify-start">
-          <img class="w-[32px] h-[32px] absolute ml-[10px] mt-[5px]" src="/images/search_black_24dp 1.png" alt="">
-          <input type="text" class="w-[100%] mx-auto p-[10px] rounded-md pl-[42px] bg-slate-100"
-            placeholder="Search Bar">
-        </span>
-        <p class="h-[2px] w-full bg-[#E0E0E0]"></p>
-        <span class="flex gap-[15px] items-center justify-center w-fit">
-          <button class="w-[80px] h-[40px] text-[#9444CB] rounded-[12px] border-[1px] border-[#E0E0E0]">Login</button>
-          <button class="bg-[#9444CB] w-[144px] h-[40px] rounded-[8px] text-white">Join The Tribe</button>
-        </span>
+    <span class="flex w-full gap-[16px] flex-col items-start pt-[20px] justify-center">
+      <span class="w-full flex items-start justify-start">
+        <img class="w-[32px] h-[32px] absolute ml-[10px] mt-[5px]" src="/images/search_black_24dp 1.png" alt="">
+        <input type="text" class="w-full mx-auto p-[10px] rounded-lg pl-11 bg-slate-100 outline-0"
+          placeholder="Search Bar">
       </span>
-    </div>
-
-    <span (click)="toggleMenu()"
-      class="hidden max-md:flex flex-col items-center justify-center w-fit h-fit gap-[4px] cursor-pointer">
-      <div [ngClass]="{'transform rotate-45': menuOpen, 'bg-black': true}"
-        class="w-[32px] h-[3.5px] rounded-full transition-all"></div>
-      <div [ngClass]="{'opacity-0': menuOpen, 'bg-black': true}"
-        class="w-[32px] h-[3.5px] rounded-full transition-opacity"></div>
-      <div [ngClass]="{'transform -rotate-45': menuOpen, 'bg-black': true}"
-        class="w-[32px] rounded-full h-[3.5px] transition-all"></div>
+      <p class="h-[2px] w-full bg-[#E0E0E0]"></p>
+      <span class="flex gap-[15px] items-center justify-center w-fit">
+        <button
+          class="px-5 py-2.5 cursor-pointer hover:brightness-90 text-[#9444CB] rounded-lg border-[1px] border-[#E0E0E0]">Login</button>
+        <button class="bg-[#9444CB] px-5 py-2.5 cursor-pointer hover:brightness-90 rounded-[8px] text-white">Join The
+          Tribe</button>
+      </span>
     </span>
-  </nav>
-</section>
+  </div>
+
+  <span (click)="toggleMenu()"
+    class="hidden max-md:flex flex-col items-center justify-center w-fit h-fit gap-[4px] cursor-pointer">
+    <div [ngClass]="{'transform rotate-45': menuOpen, 'bg-black': true}"
+      class="w-[32px] h-[3.5px] rounded-full transition-all"></div>
+    <div [ngClass]="{'opacity-0': menuOpen, 'bg-black': true}"
+      class="w-[32px] h-[3.5px] rounded-full transition-opacity"></div>
+    <div [ngClass]="{'transform -rotate-45': menuOpen, 'bg-black': true}"
+      class="w-[32px] rounded-full h-[3.5px] transition-all"></div>
+  </span>
+</nav>
