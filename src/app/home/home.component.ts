@@ -7,6 +7,7 @@ import { FiltersContainerComponent } from "../components/filters-container/filte
 import { HeaderComponent } from "../components/header/header.component";
 import { SearchBarComponent } from "../components/search-bar/search-bar.component";
 import { SortingsComponent } from "../components/sortings/sortings.component";
+import { FilterBarComponent } from "../components/filter-bar/filter-bar.component";
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import { SortingsComponent } from "../components/sortings/sortings.component";
     FiltersContainerComponent,
     HeaderComponent,
     SearchBarComponent,
-    SortingsComponent
+    SortingsComponent,
+    FilterBarComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

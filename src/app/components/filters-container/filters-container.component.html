@@ -1,70 +1,13 @@
 <div class="relative">
     <!-- sidebar filter container -->
-    <div class="justify-end items-center flex lg:hidden">
-        <div class="w-fit cursor-pointer flex justify-center" (click)="toggleFiltersContainer()">
-            <button mat-icon-button>
-                <mat-icon class="font-bold text-[0.9rem]">filter_list</mat-icon>
-            </button>
-        </div>
+    <div class="cursor-pointer flex justify-center items-center bg-white rounded-full h-11 w-11"
+        (click)="toggleFiltersContainer()">
+        <button mat-icon-button>
+            <mat-icon class="font-bold text-[0.9rem] mt-1.5">filter_list</mat-icon>
+        </button>
     </div>
-    <div class="absolute shadow border border-gray-200 rounded-xl bg-white z-20 h-[380px] w-[240px] top-16 right-0 lg:sticky lg:shadow-none lg:border-none overflow-auto no-scrollbar"
+    <div class="absolute z-20 h-[380px] w-[240px] top-16 right-0 lg:sticky lg:shadow-none lg:border-none overflow-auto no-scrollbar"
         [class.hidden]="!showFiltersContainer()">
-        <div>
-            <mat-list class="list-container">
-                <span class="list-title">Category</span>
-                <mat-selection-list class="selection-list" [multiple]="false">
-                    <mat-list-option togglePosition="before"> <span
-                            class="list-option">Restaurant</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">Music</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">Shopping</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">Ride</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span
-                            class="list-option">E-commerce</span></mat-list-option>
-                </mat-selection-list>
-            </mat-list>
-
-            <mat-list class="list-container">
-                <span class="list-title">Price</span>
-                <div>
-                    <mat-slider>
-                        <input matSliderStartThumb>
-                        <input matSliderEndThumb>
-                    </mat-slider>
-                </div>
-                <div>
-                    <mat-chip-listbox aria-label="Price selection">
-                        <mat-chip color="accent">$$$</mat-chip>
-                        <mat-chip color="accent">$$$$</mat-chip>
-                    </mat-chip-listbox>
-                </div>
-            </mat-list>
-
-            <mat-list class="list-container">
-                <span class="list-title">Percentage</span>
-                <mat-selection-list class="selection-list" [multiple]="false">
-                    <mat-list-option togglePosition="before"><span class="list-option">Free</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">0 - 10%</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">10 - 25%</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">35 - 50%</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">50 - 65%</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">65% &
-                            above</span></mat-list-option>
-                </mat-selection-list>
-            </mat-list>
-
-            <mat-list class="list-container">
-                <span class="list-title">Location</span>
-                <mat-selection-list class="selection-list" [multiple]="false">
-                    <mat-list-option togglePosition="before"><span class="list-option">Lagos</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">Ogun</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">Oyo</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">Abuja</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">Port
-                            Harcourt</span></mat-list-option>
-                    <mat-list-option togglePosition="before"><span class="list-option">65% and
-                            Above</span></mat-list-option>
-                </mat-selection-list>
-            </mat-list>
-        </div>
+        <app-filter-bar></app-filter-bar>
     </div>
 </div>

@@ -1,0 +1,20 @@
+.list-container {
+    padding: 16px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.list-title {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #757575;
+    margin-bottom: 8px;
+}
+
+.selection-list {
+    padding: 0 !important;
+}
+
+.list-option {
+    color: #1B1C1E;
+}

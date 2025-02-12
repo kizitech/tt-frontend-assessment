@@ -9,25 +9,14 @@ import { MatListModule, MatSelectionList, MatListOption } from '@angular/materia
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
+import { FilterBarComponent } from "../filter-bar/filter-bar.component";
 
 @Component({
   selector: 'app-filters-container',
   imports: [
     CommonModule,
-    FormsModule,
-    MatListModule,
     MatIconModule,
-    MatChipsModule,
-    MatRadioModule,
-    MatButtonModule,
-    MatSliderModule,
-    MatExpansionModule,
-    MatSlideToggleModule,
-    MatSelectionList,
-    MatListOption,
-    MatChipListbox,
-    MatChip,
-    MatIconModule,
+    FilterBarComponent
   ],
   templateUrl: './filters-container.component.html',
   styleUrls: ['./filters-container.component.css']
