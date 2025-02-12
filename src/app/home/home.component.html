@@ -1,12 +1,26 @@
 <!-- The Navigation Bar -->
-<app-navbar></app-navbar>
+<app-header></app-header>
 
 <!-- The App Body -->
 <main class="bg-[#FAFAFA]">
     <div class="p-6 pt-10 pr-5 pb-6 pl-5 sm:pr-10 sm:pl-10">
         <div>
             <div class="relative" fxLayout="row" fxLayoutGap="2rem" fxLayout.lt-md="column">
-                <app-filters-container></app-filters-container>
+                <div class="flex flex-col md:flex-row md:items-center gap-4">
+                    <!-- search bar -->
+                    <div class="flex-1">
+                        <app-search-bar></app-search-bar>
+                    </div>
+                    <!-- sorting -->
+                    <div class="flex justify-between items-center max-md:gap-10">
+                        <div class="bg-white rounded-2xl py-2 px-4">
+                            <app-sortings></app-sortings>
+                        </div>
+                        <div class="bg-white rounded-full">
+                            <app-filters-container></app-filters-container>
+                        </div>
+                    </div>
+                </div>
                 <!-- <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lt-md="100%">
                     <div *ngFor="let store-card of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
                         <div>
