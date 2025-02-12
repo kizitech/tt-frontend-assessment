@@ -8,7 +8,6 @@ import { SearchBarComponent } from "../../components/search-bar/search-bar.compo
 import { SortingsComponent } from "../../components/sortings/sortings.component";
 import { FilterBarComponent } from "../../components/filter-bar/filter-bar.component";
 import { HeaderComponent } from '../../components/header/header.component';
-import { StoreCardComponent } from "../../components/store-card/store-card.component";
 import { CardComponent } from "../../components/card/card.component";
 
 @Component({
@@ -24,7 +23,6 @@ import { CardComponent } from "../../components/card/card.component";
     SearchBarComponent,
     SortingsComponent,
     FilterBarComponent,
-    StoreCardComponent,
     CardComponent
 ],
   templateUrl: './home.component.html',
