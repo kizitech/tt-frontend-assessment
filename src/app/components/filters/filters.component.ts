@@ -10,9 +10,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectionList, MatListOption } from '@angular/material/list';
-import { MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle } from '@angular/material/expansion';
 import { MatChipListbox, MatChip } from '@angular/material/chips';
-import { MatSliderThumb } from '@angular/material/slider';
 
 @Component({
 	selector: 'app-filters',
@@ -29,13 +27,8 @@ import { MatSliderThumb } from '@angular/material/slider';
 		MatSlideToggleModule,
 		MatSelectionList,
 		MatListOption,
-		MatAccordion,
-		MatExpansionPanel,
-		MatExpansionPanelHeader,
-		MatExpansionPanelTitle,
 		MatChipListbox,
 		MatChip,
-		MatSliderThumb
 	],
 	templateUrl: './filters.component.html',
 	styleUrls: ['./filters.component.css']
