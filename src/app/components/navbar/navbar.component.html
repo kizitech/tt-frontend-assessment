@@ -1,18 +1,17 @@
 <nav class="flex w-full h-[80px] justify-between px-4 md:-8 items-center">
-  <img src="/images/logo.png" class="w-[100px] h-[32px] object-contain" alt="">
-  <ul class="w-fit max-md:hidden h-fit flex items-center gap-[24px] capitalize text-[16px] justify-center">
+  <!-- Desktop Navbar -->
+  <img src="/images/logo.png" class="w-[100px] h-8 object-contain" alt="logo">
+  <ul class="w-fit max-md:hidden h-fit flex items-center gap-6 capitalize text-[16px] justify-center">
     <li>The What?</li>
     <li class="w-[2px] h-[28px] bg-[#E0E0E0]"></li>
-    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/mentor.png"
-        alt="">mentor</li>
-    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/events.png"
-        alt="">events</li>
-    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/coupons.png"
-        alt="">coupons</li>
-    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/courses.png"
-        alt="">courses</li>
-    <li class="flex items-center gap-[4px] justify-center"><img class="w-[24px] h-[24px]" src="/images/jobs.png"
-        alt="">jobs</li>
+    <li class="flex items-center gap-1 justify-center"><img class="w-6 h-6" src="/images/mentor.png" alt="">mentor</li>
+    <li class="flex items-center gap-1 justify-center"><img class="w-6 h-6" src="/images/events.png" alt="">events</li>
+    <li class="flex items-center gap-1 justify-center"><img class="w-6 h-6" src="/images/coupons.png" alt="">coupons
+    </li>
+    <li class="flex items-center gap-1 justify-center"><img class="w-6 h-6" src="/images/courses.png" alt="">courses
+    </li>
+    <li class="flex items-center gap-1 justify-center"><img class="w-6 h-6" src="/images/jobs.png" alt="">jobs
+    </li>
   </ul>
 
   <span class="flex gap-[16px] max-md:hidden items-center justify-center">
@@ -22,25 +21,26 @@
     <button class="bg-[#9444CB] w-[144px] h-[40px] rounded-[8px] text-white">Join The Tribe</button>
   </span>
 
+  <!-- Mobile Navbar -->
   <div [@menuToggle]="menuOpen ? 'open' : 'closed'"
     class="w-full left-0 z-[100] h-fit bg-white absolute top-[79px] items-start justify-between p-[20px] overflow-hidden">
     <ul class="w-full h-fit flex flex-col items-start capitalize text-[16px] justify-center">
       <li>The What?</li>
       <li class="w-full h-[2px] bg-[#E0E0E0]"></li>
       <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
-        <img class="w-[24px] h-[24px]" src="/images/mentor.png" alt="">mentor
+        <img class="w-6 h-6" src="/images/mentor.png" alt="">mentor
       </li>
       <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
-        <img class="w-[24px] h-[24px]" src="/images/events.png" alt="">events
+        <img class="w-6 h-6" src="/images/events.png" alt="">events
       </li>
       <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
-        <img class="w-[24px] h-[24px]" src="/images/coupons.png" alt="">coupons
+        <img class="w-6 h-6" src="/images/coupons.png" alt="">coupons
       </li>
       <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
-        <img class="w-[24px] h-[24px]" src="/images/courses.png" alt="">courses
+        <img class="w-6 h-6" src="/images/courses.png" alt="">courses
       </li>
       <li class="flex items-center gap-[4px] cursor-pointer hover:bg-slate-100 hover:pl-6 transition-all w-full p-4">
-        <img class="w-[24px] h-[24px]" src="/images/jobs.png" alt="">jobs
+        <img class="w-6 h-6" src="/images/jobs.png" alt="">jobs
       </li>
     </ul>
     <span class="flex w-full gap-[16px] flex-col items-start pt-[20px] justify-center">
