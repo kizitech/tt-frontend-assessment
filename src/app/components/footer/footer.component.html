@@ -1,48 +1,23 @@
-<div class="flex justify-center items-center min-h-[500px] bg-white">
-    <div class="bg-white flex flex-col gap-10 md:flex-row py-[55px] px-20 rounded-xl shadow-md w-full max-w-5xl">
-        <div class="grid gap-6 w-[407px]">
-            <div class="flex items-center space-x-2 mb-4">
+<div class="flex justify-center items-center min-h-[500px] bg-whit md:p-8">
+    <div
+        class="bg-white flex flex-col gap-7 md:gap-24 lg:flex-row py-10 md:py-[55px] px-4 md:px-20 md:rounded-xl box-shadow w-full max-w-6xl">
+        <div class="grid gap-2 md:gap-6 md:w-[407px]">
+            <div class="grid">
                 <div class="flex -space-x-2">
-                    <img class="w-8 h-8 rounded-full border-2 border-white"
-                        src="https://randomuser.me/api/portraits/women/1.jpg" alt="User">
-                    <img class="w-8 h-8 rounded-full border-2 border-white"
-                        src="https://randomuser.me/api/portraits/men/2.jpg" alt="User">
-                    <img class="w-8 h-8 rounded-full border-2 border-white"
-                        src="https://randomuser.me/api/portraits/women/3.jpg" alt="User">
+                    <img class="w-12 h-12 rounded-full" src="/images/headshot1.png" alt="User">
+                    <img class="w-12 h-12 rounded-full" src="/images/headshot2.png" alt="User">
+                    <img class="w-12 h-12 rounded-full" src="/images/headshot3.png" alt="User">
                 </div>
+                <img class="my-2.5 h-3" src="/icons/underline.png" alt="User">
             </div>
-            <h2 class="text-[32px] tracking-[-1.5px] leading-[36px] font-medium mb-2">Don't quite find what you want?
+            <h2 class="text-2xl md:text-[32px] md:tracking-[-1.5px] md:leading-[36px] font-medium mb-1 md:mb-2">
+                Don't quite find what you want?
             </h2>
-            <p class="text-gray-600 mb-4">Let us know and we will make it available for you in a jiffy.</p>
+            <p class="text-gray-600 text-base md:text-xl">
+                Let us know and we will make it available for you in a jiffy.</p>
         </div>
-        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="w-full">
-            <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-[#757575] mb-1">Name</label>
-                    <input id="name" formControlName="name" type="text" placeholder="Enter your name"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-[#757575] mb-1">Email</label>
-                    <input id="email" formControlName="email" type="email" placeholder="Enter your email"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
-                </div>
-                <div>
-                    <label for="product" class="block text-sm font-medium text-[#757575] mb-1">Product name</label>
-                    <input id="product" formControlName="product" type="text" placeholder="Enter name of product"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
-                </div>
-                <div>
-                    <label for="vendor" class="block text-sm font-medium text-[#757575] mb-1">Vendor name</label>
-                    <input id="vendor" formControlName="vendor" type="text" placeholder="e.g. Jumia, Airpeace, Spotify"
-                        class="p-3 border border-[#E0E0E0] placeholder:text-[#BDBDBD] rounded-[8px] w-full min-w-[240px]">
-                </div>
-            </div>
-            <button type="submit"
-                class="w-full mt-4 bg-[#9444CB] text-white flex items-center justify-center gap-2 rounded-[8px] py-3 px-6 hover:brightness-90 transition cursor-pointer">
-                <span class="text-lg font-semibold">Submit</span>
-                <img src="icons/arrow-left.png" alt="Submit" class="">
-            </button>
-        </form>
+        <div class="lg:w-[507px]">
+            <app-formfield></app-formfield>
+        </div>
     </div>
 </div>
