@@ -10,6 +10,7 @@ import { FilterBarComponent } from "../../components/filter-bar/filter-bar.compo
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardComponent } from "../../components/card/card.component";
 import { NavbarComponent } from "../../components/navbar/navbar.component";
+import { DataViewComponent } from "../../components/data-view/data-view.component";
 
 @Component({
   selector: 'app-home',
@@ -25,7 +26,8 @@ import { NavbarComponent } from "../../components/navbar/navbar.component";
     SortingsComponent,
     FilterBarComponent,
     CardComponent,
-    NavbarComponent
+    NavbarComponent,
+    DataViewComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
