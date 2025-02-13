@@ -8,6 +8,7 @@ import { SortingsComponent } from "../../components/sortings/sortings.component"
 import { FilterBarComponent } from "../../components/filter-bar/filter-bar.component";
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardComponent } from "../../components/card/card.component";
+import { CommonModule } from '@angular/common';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
@@ -24,6 +25,7 @@ import { NavbarComponent } from "../../components/navbar/navbar.component";
     FilterBarComponent,
     CardComponent,
     NavbarComponent,
+    CommonModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
