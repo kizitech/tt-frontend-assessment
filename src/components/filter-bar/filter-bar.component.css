@@ -17,4 +17,45 @@
 
 .list-option {
     color: #1B1C1E;
+    padding-bottom: 5px;
+}
+
+
+::ng-deep.mat-accent .mdc-list-item__start, .mat-accent .mdc-list-item__end {
+    --mdc-radio-selected-focus-icon-color: #9444CB !important;
+    --mdc-radio-selected-hover-icon-color: #9444CB !important;
+    --mdc-radio-selected-icon-color: #9444CB !important;
+    --mdc-radio-selected-pressed-icon-color: #9444CB !important;
+}
+
+::ng-deep.mat-primary {
+    --mat-full-pseudo-checkbox-selected-icon-color: #9444CB !important;
+}
+
+::ng-deep.mdc-list-item--with-leading-radio.mdc-list-item {
+    padding-right: 0 !important;
+    height: 32px !important;
+}
+
+::ng-deep.mdc-list-item--with-leading-radio .mdc-list-item__start {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+::ng-deep.mdc-list-item--with-leading-icon .mdc-list-item__start {
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+}
+::ng-deep.mat-mdc-list-option .mdc-radio {
+    padding: 0 !important;
+    padding-right: 10px !important;
+}
+
+::ng-deep.mdc-list-item__content {
+    margin-bottom: 6px !important;
+}
+
+::ng-deep.mat-mdc-list-base {
+    --mdc-list-list-item-one-line-container-height: 43px;
+    --mdc-list-list-item-two-line-container-height: 57px;
+    --mdc-list-list-item-three-line-container-height: 79px;
 }
