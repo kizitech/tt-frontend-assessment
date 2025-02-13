@@ -1,9 +1,25 @@
 @import "tailwindcss";
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @font-face {
     font-family: 'CreatoDisplay';
     src: url('/public/fonts/CreatoDisplay-Regular.otf') format('opentype');
+}
+
+@layer utilities {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
 }
 
 html,
@@ -14,4 +30,8 @@ body {
 body {
     margin: 0;
     font-family: 'CreatoDisplay', sans-serif;
+}
+
+.box-shadow {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }

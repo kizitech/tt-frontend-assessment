@@ -3,28 +3,33 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from '../../components/footer/footer.component';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { FiltersComponent } from '../../components/filters/filters.component';
-import { StoreCardComponent } from '../../components/store-card/store-card.component';
+import { FiltersContainerComponent } from "../../components/filters-container/filters-container.component";
+import { SearchBarComponent } from "../../components/search-bar/search-bar.component";
+import { SortingsComponent } from "../../components/sortings/sortings.component";
+import { FilterBarComponent } from "../../components/filter-bar/filter-bar.component";
+import { HeaderComponent } from '../../components/header/header.component';
+import { CardComponent } from "../../components/card/card.component";
+import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
   selector: 'app-home',
   imports: [
     MatIconModule,
     FooterComponent,
-    NavbarComponent,
+    HeaderComponent,
     FlexLayoutModule,
-    FiltersComponent,
-    StoreCardComponent,
     ReactiveFormsModule,
-  ],
+    FiltersContainerComponent,
+    HeaderComponent,
+    SearchBarComponent,
+    SortingsComponent,
+    FilterBarComponent,
+    CardComponent,
+    NavbarComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  showFiltersContainer = false;
 
-  toggleFiltersContainer() {
-    this.showFiltersContainer = !this.showFiltersContainer;
-  }
 }

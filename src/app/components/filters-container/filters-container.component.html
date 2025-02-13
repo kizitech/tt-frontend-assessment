@@ -1,0 +1,13 @@
+<div class="relative">
+    <!-- sidebar filter container -->
+    <div class="cursor-pointer flex justify-center items-center bg-white rounded-full h-11 w-11"
+        (click)="toggleFiltersContainer()">
+        <button mat-icon-button>
+            <mat-icon class="font-bold text-[0.9rem] mt-1.5">filter_list</mat-icon>
+        </button>
+    </div>
+    <div class="absolute z-20 h-[380px] w-[240px] top-16 right-0 lg:sticky lg:shadow-none lg:border-none overflow-auto no-scrollbar"
+        [class.hidden]="!showFiltersContainer()">
+        <app-filter-bar></app-filter-bar>
+    </div>
+</div>
