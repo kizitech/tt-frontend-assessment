@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { map } from 'rxjs/operators';
+import { SearchService } from '../services/search.service';
 
 interface Offer {
   title: string;
@@ -19,16 +20,22 @@ interface Offer {
 })
 export class CardComponent implements OnInit {
   offers: Offer[] = [];
+  filteredOffers: Offer[] = [];
   paginatedOffers: Offer[] = [];
   currentPage = 1;
   itemsPerPage = 16;
   totalPages = 0;
   visiblePages: (number | string)[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private searchService: SearchService) {}
 
   ngOnInit(): void {
     this.loadOffers();
+
+    // Subscribe to search term updates
+    this.searchService.searchTerm$.subscribe(term => {
+      this.filterOffers(term);
+    });
   }
 
   loadOffers(): void {
@@ -37,21 +44,38 @@ export class CardComponent implements OnInit {
       .subscribe(
         (data) => {
           this.offers = data;
-          this.totalPages = Math.ceil(this.offers.length / this.itemsPerPage);
+          this.filteredOffers = [...this.offers];
+          this.totalPages = Math.ceil(this.filteredOffers.length / this.itemsPerPage);
           this.updatePaginatedOffers();
           this.updateVisiblePages();
         },
         (error) => {
           console.error('Error loading offers', error);
           this.offers = [];
+          this.filteredOffers = [];
         }
       );
+  }
+
+  filterOffers(searchTerm: string): void {
+    if (!searchTerm.trim()) {
+      this.filteredOffers = [...this.offers];
+    } else {
+      this.filteredOffers = this.offers.filter(offer =>
+        offer.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        offer.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    this.totalPages = Math.ceil(this.filteredOffers.length / this.itemsPerPage);
+    this.currentPage = 1; // Reset to first page
+    this.updatePaginatedOffers();
+    this.updateVisiblePages();
   }
 
   updatePaginatedOffers(): void {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
-    this.paginatedOffers = this.offers.slice(startIndex, endIndex);
+    this.paginatedOffers = this.filteredOffers.slice(startIndex, endIndex);
   }
 
   updateVisiblePages(): void {
