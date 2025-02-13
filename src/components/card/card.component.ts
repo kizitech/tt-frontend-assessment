@@ -27,7 +27,7 @@ export class CardComponent implements OnInit {
   totalPages = 0;
   visiblePages: (number | string)[] = [];
 
-  constructor(private http: HttpClient, private searchService: SearchService) {}
+  constructor(private http: HttpClient, private searchService: SearchService) { }
 
   ngOnInit(): void {
     this.loadOffers();
@@ -67,7 +67,7 @@ export class CardComponent implements OnInit {
       );
     }
     this.totalPages = Math.ceil(this.filteredOffers.length / this.itemsPerPage);
-    this.currentPage = 1; // Reset to first page
+    this.currentPage = 1;
     this.updatePaginatedOffers();
     this.updateVisiblePages();
   }

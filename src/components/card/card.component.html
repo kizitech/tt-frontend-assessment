@@ -1,32 +1,41 @@
-<div class="grid grid-cols-[repeat(auto-fit,_minmax(213px,_1fr))] gap-4">
-<div *ngFor="let offer of paginatedOffers" 
-     class="p-4 bg-slate-50 rounded-xl border border-gray-200 py-6 px-4 grid gap-4 md:gap-6">
-  <div class="flex justify-between items-center mb-2">
-    <img src="/images/jumia-logo.png" alt="Jumia" class="w-10 h-10 rounded">
-    <div class="flex items-center gap-5">
-      <button class="cursor-pointer hover:brightness-90">
-        <img src="/icons/share.png" alt="Share" class="h-4">
-      </button>
-      <button class="cursor-pointer hover:brightness-90">
-        <img src="/icons/bookmark.png" alt="Bookmark" class="h-4">
-      </button>
+<div *ngIf="paginatedOffers.length > 0; else noResults" class="grid grid-cols-[repeat(auto-fit,_minmax(213px,_1fr))] gap-4">
+  <div *ngFor="let offer of paginatedOffers" 
+       class="p-4 bg-slate-50 rounded-xl border border-gray-200 py-6 px-4 grid gap-4 md:gap-6">
+    <div class="flex justify-between items-center mb-2">
+      <img src="/images/jumia-logo.png" alt="Jumia" class="w-10 h-10 rounded">
+      <div class="flex items-center gap-5">
+        <button class="cursor-pointer hover:brightness-90">
+          <img src="/icons/share.png" alt="Share" class="h-4">
+        </button>
+        <button class="cursor-pointer hover:brightness-90">
+          <img src="/icons/bookmark.png" alt="Bookmark" class="h-4">
+        </button>
+      </div>
     </div>
+    
+    <div class="flex gap-4 justify-between items-start">
+      <h2 class="text-base text-[#1B1C1E] font-semibold line-clamp-2">{{ offer.title }}</h2>
+      <span class="text-base text-[#1B1C1E] font-semibold">-{{ offer.coupon_discount }}%</span>
+    </div>
+    <p class="text-[#616161] text-xs font-medium line-clamp-3">{{ offer.description }}</p>
+    
+    <button class="mt-1 cursor-pointer w-full py-2 px-4 border rounded-xl text-sm font-bold flex items-center justify-center gap-2 hover:bg-gray-100">
+      <span>See Offer</span>
+      <img src="/icons/black-arrow-left.png" alt="See Offer" class="h-2">
+    </button>
   </div>
-  
-  <div class="flex gap-4 justify-between items-start">
-    <h2 class="text-base text-[#1B1C1E] font-semibold line-clamp-2">{{ offer.title }}</h2>
-    <span class="text-base text-[#1B1C1E] font-semibold">-{{ offer.coupon_discount }}%</span>
+</div>
+
+<!-- No Results Found Message -->
+<ng-template #noResults>
+  <div class="text-center text-gray-900 my-16 ">
+    <p class="text-xl font-semibold">No results found</p>
+    <p class="text-base mt-2">Try adjusting your search or check back later.</p>
   </div>
-  <p class="text-[#616161] text-xs font-medium line-clamp-3">{{ offer.description }}</p>
-  
-  <button class="mt-1 cursor-pointer w-full py-2 px-4 border rounded-xl text-sm font-bold flex items-center justify-center gap-2 hover:bg-gray-100">
-    <span>See Offer</span>
-    <img src="/icons/black-arrow-left.png" alt="See Offer" class="h-2">
-  </button>
-</div>
-</div>
+</ng-template>
+
 <!-- Pagination Controls -->
-<div class="flex justify-center md:justify-end items-center gap-3 mt-4">
+<div class="flex justify-center md:justify-end items-center gap-3 mt-4" *ngIf="totalPages > 1">
   <!-- Previous Button -->
   <button (click)="goToPage(currentPage - 1)" 
           [disabled]="currentPage === 1" 
