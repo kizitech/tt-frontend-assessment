@@ -27,14 +27,26 @@
 </div>
 <!-- Pagination Controls -->
 <div class="flex justify-center items-center gap-3 mt-4">
+  <!-- Previous Button -->
   <button (click)="goToPage(currentPage - 1)" 
           [disabled]="currentPage === 1" 
           class="px-3 py-2 border rounded-lg text-gray-700 hover:bg-gray-200 disabled:opacity-50">
     Previous
   </button>
 
-  <span class="font-semibold text-gray-700">Page {{ currentPage }} of {{ totalPages }}</span>
+  <!-- Page Numbers -->
+  <div class="flex gap-1">
+    <button *ngFor="let page of visiblePages" 
+            (click)="goToPage(page)" 
+            [disabled]="page === '...'" 
+            [class.bg-gray-700]="page === currentPage"
+            [class.text-white]="page === currentPage"
+            class="px-3 py-2 border rounded-lg text-gray-700 hover:bg-gray-200">
+      {{ page }}
+    </button>
+  </div>
 
+  <!-- Next Button -->
   <button (click)="goToPage(currentPage + 1)" 
           [disabled]="currentPage === totalPages" 
           class="px-3 py-2 border rounded-lg text-gray-700 hover:bg-gray-200 disabled:opacity-50">
