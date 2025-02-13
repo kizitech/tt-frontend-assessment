@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { FiltersContainerComponent } from "../../components/filters-container/filters-container.component";
 import { SearchBarComponent } from "../../components/search-bar/search-bar.component";
@@ -10,7 +9,6 @@ import { FilterBarComponent } from "../../components/filter-bar/filter-bar.compo
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardComponent } from "../../components/card/card.component";
 import { NavbarComponent } from "../../components/navbar/navbar.component";
-import { DataViewComponent } from "../../components/data-view/data-view.component";
 
 @Component({
   selector: 'app-home',
@@ -18,7 +16,6 @@ import { DataViewComponent } from "../../components/data-view/data-view.componen
     MatIconModule,
     FooterComponent,
     HeaderComponent,
-    FlexLayoutModule,
     ReactiveFormsModule,
     FiltersContainerComponent,
     HeaderComponent,
@@ -27,8 +24,7 @@ import { DataViewComponent } from "../../components/data-view/data-view.componen
     FilterBarComponent,
     CardComponent,
     NavbarComponent,
-    DataViewComponent
-],
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
