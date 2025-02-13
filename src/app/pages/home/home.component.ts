@@ -9,7 +9,6 @@ import { SortingsComponent } from "../../components/sortings/sortings.component"
 import { FilterBarComponent } from "../../components/filter-bar/filter-bar.component";
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardComponent } from "../../components/card/card.component";
-import {MatPaginatorModule} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +24,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     SortingsComponent,
     FilterBarComponent,
     CardComponent,
-    MatPaginatorModule
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
