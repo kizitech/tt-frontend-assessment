@@ -3,7 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { map } from 'rxjs/operators';
-import { SearchService } from '../services/search.service';
+import { SearchService } from '../../services/search.service';
 
 interface Offer {
   title: string;

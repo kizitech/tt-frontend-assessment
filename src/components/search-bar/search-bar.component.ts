@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SearchService } from '../services/search.service';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -12,7 +12,7 @@ import { SearchService } from '../services/search.service';
 export class SearchBarComponent {
   searchTerm = '';
 
-  constructor(private searchService: SearchService) {}
+  constructor(private searchService: SearchService) { }
 
   onSearchChange() {
     this.searchService.setSearchTerm(this.searchTerm);
